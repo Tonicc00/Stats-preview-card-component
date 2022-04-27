@@ -1,0 +1,223 @@
+@import url(https://fonts.google.com/specimen/Inter);
+@import url(https://fonts.google.com/specimen/Lexend+Deca);¸
+
+/* variables */
+
+:root{
+    font-size: 15px;
+    --prim-dark-blue:hsl(233, 47%, 7%);
+    --prim-desaturated-blue:hsl(244, 38%, 16%);
+    --prim-soft-violet: hsl(277, 64%, 61%);
+
+    --neutral-white:hsl(0, 0%, 100%);
+    --neutral-slyTrans-white1: hsla(0, 0%, 100%, 0.75);
+    --neutral-slyTrans-white2:hsla(0, 0%, 100%, 0.6);
+
+    --bg-violet:hsl(277deg, 100%, 50%, 0.42);
+    --bg-light-violet:hsl(293deg, 42%, 35%, 0.24);
+}
+
+/* defaults */
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(233, 47%, 7%);
+    color:  hsl(0, 0%, 100%);
+    font-weight: 400;
+}
+
+/* stats card */
+
+main{
+    min-width: 600px;
+    z-index: 1;
+    display: flex;
+    margin: 1em;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    padding: 5.85em 7em 5.85em 5.85em;
+    width: 570px;
+    min-width: 300px;
+    background: hsl(244, 38%, 16%);
+    border-radius: 10px 0 0 10px;
+}
+
+section h1{
+    color: hsl(0, 0%, 100%);
+    font-size: 2.25rem;
+    margin-bottom: 0.75em;
+    font-weight: 700;
+}
+
+section h1 span{
+    color: hsl(277, 64%, 61%);
+}
+
+section .content{
+    margin-right: 2em;
+}
+
+section .lead{
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.5em;
+    margin-bottom: 5em;
+}
+
+section ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    letter-spacing: 1px;
+}
+
+section ul h2{
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 0.3em;
+}
+
+section ul p{
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.image{
+    min-height: 10em;
+    width: 540px;
+    min-width: 200px;
+    background: url(images/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+}
+
+.overlay{
+    color:hsl(277deg, 100%, 50%, 0.42);
+    height: 100%;
+
+}
+
+.overlayTwo{
+    background: hsl(293deg, 42%, 35%, 0.24);
+    height: 100%;
+    mix-blend-mode: color-burn;
+}
+
+/* footer */
+
+footer{
+    position: absolute;
+    bottom: 0;
+    font-size: 0.75rem;
+    line-height: 20px;
+    text-align: center;
+    color: hsla(0, 0%, 100%, 0.6);
+    margin-bottom: 10px;
+
+    
+    text-decoration: none;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-weight: bold;
+}
+
+footer a:hover{
+    color: hsl(277, 64%, 61%);
+}
+
+/* media queries */
+
+@media only screen and(max-width: 1024px){
+    :root{
+        font-size: 12px;
+    }
+    section{
+        padding: 3em 4.5em 3em 3em;
+    }
+}
+
+@media only screen and(max-width: 375px){
+    body{
+        flex-direction: column;
+    }
+
+    main{
+        flex-direction: column-reverse;
+        margin: 10px;
+        min-width: 200px;
+        margin-top: 5em;
+    }
+
+    section{
+        padding: 0;
+        padding: 3em;
+        width: 300px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    section h1 .lead{
+        text-align: center;
+    }
+
+    .lead{
+        font-size: 1.1rem;
+        margin-bottom: 2em;
+        line-height: 1.75em;
+    }
+
+    .content{
+        margin-right: 0;
+    }
+
+    ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li{
+        margin-bottom: 2em;
+    }
+
+    h2{
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 0.25em;
+    }
+
+    ul p{
+        font-size: 1.05rem;
+    }
+
+
+
+    .image{
+        height: 220px;
+        width: 300px;
+        border-radius: 10px 10px 0 0;
+        background: url(images/image-header-mobile.jpg);
+        background-size: contain;
+    }
+
+    
+
+    footer{
+        position: relative;
+        margin-top: 20px;
+    }
+}
